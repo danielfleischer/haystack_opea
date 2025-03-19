@@ -4,12 +4,8 @@
 all: help
 
 # Define a variable for the test file path.
-TEST_FILE ?= tests/unit_tests/
-
-integration_test integration_tests: TEST_FILE=tests/integration_tests/
-
-test tests integration_test integration_tests:
-	poetry run pytest $(TEST_FILE)
+test tests:
+	poetry run pytest tests/
 
 ######################
 # LINTING AND FORMATTING
@@ -20,7 +16,7 @@ PYTHON_FILES=.
 MYPY_CACHE=.mypy_cache
 lint format: PYTHON_FILES=.
 lint_diff format_diff: PYTHON_FILES=$(shell git diff --relative=libs/partners/opea --name-only --diff-filter=d master | grep -E '\.py$$|\.ipynb$$')
-lint_package: PYTHON_FILES=langchain_opea
+lint_package: PYTHON_FILES=haystack_opea
 lint_tests: PYTHON_FILES=tests
 lint_tests: MYPY_CACHE=.mypy_cache_test
 
@@ -39,7 +35,7 @@ spell_check:
 spell_fix:
 	poetry run codespell --toml pyproject.toml -w
 
-check_imports: $(shell find langchain_opea -name '*.py')
+check_imports: $(shell find haystack_opea -name '*.py')
 	poetry run python ./scripts/check_imports.py $^
 
 ######################
