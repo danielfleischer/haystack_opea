@@ -27,19 +27,6 @@ To install the package from a pre-built wheel, run:
     pip install dist/haystack_opea-0.1.0-py3-none-any.whl
     ```
 
-## Chat Models
-
-`ChatOPEA` class exposes OPENAI Compatible chat models from OPEA.
-
-```python
-from langchain_opea import ChatOPEA
-
-llm = ChatOPEA(
-    model="Intel/neural-chat-7b-v3-3", opea_api_key="my_secret_value", opea_api_base="http://localhost:9009/v1"
-)
-llm.invoke("Sing a ballad of LangChain.")
-```
-
 ## Embeddings
 
 The classes `OPEADocumentEmbedder` and `OPEATextEmbedder` are introduced.
