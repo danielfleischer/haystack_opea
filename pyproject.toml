@@ -22,11 +22,7 @@ disallow_untyped_defs = "True"
 omit = ["tests/*"]
 
 [tool.pytest.ini_options]
-addopts = "--strict-markers --strict-config --durations=5"
-markers = [
-  "compile: mark placeholder test used to compile integration tests without running them",
-]
-asyncio_mode = "auto"
+addopts = "--strict-config --durations=10"
 
 [tool.poetry.group.test]
 optional = true
@@ -44,6 +40,7 @@ optional = true
 
 [tool.poetry.group.test.dependencies]
 pytest = "^7.4.3"
+requests-mock = "^1.12.1"
 
 [tool.poetry.group.test_integration.dependencies]
 
