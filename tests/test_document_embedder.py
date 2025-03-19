@@ -5,7 +5,7 @@ import os
 
 import pytest
 from haystack import Document, default_from_dict
-from opea_haystack.embedders.tei import EmbeddingTruncateMode, OPEADocumentEmbedder
+from haystack_opea.embedders.tei import EmbeddingTruncateMode, OPEADocumentEmbedder
 
 from . import MockBackend
 
@@ -45,7 +45,7 @@ class TestOPEADocumentEmbedder:
         component = OPEADocumentEmbedder()
         data = component.to_dict()
         assert data == {
-            "type": "opea_haystack.embedders.tei.document_embedder.OPEADocumentEmbedder",
+            "type": "haystack_opea.embedders.tei.document_embedder.OPEADocumentEmbedder",
             "init_parameters": {
                 "api_url": "http://localhost:6006",
                 "prefix": "",
@@ -71,7 +71,7 @@ class TestOPEADocumentEmbedder:
         )
         data = component.to_dict()
         assert data == {
-            "type": "opea_haystack.embedders.tei.document_embedder.OPEADocumentEmbedder",
+            "type": "haystack_opea.embedders.tei.document_embedder.OPEADocumentEmbedder",
             "init_parameters": {
                 "api_url": "http://localhost:6006/test",
                 "prefix": "prefix",
@@ -86,7 +86,7 @@ class TestOPEADocumentEmbedder:
 
     def test_from_dict(self):
         data = {
-            "type": "opea_haystack.embedders.tei.document_embedder.OPEADocumentEmbedder",
+            "type": "haystack_opea.embedders.tei.document_embedder.OPEADocumentEmbedder",
             "init_parameters": {
                 "api_url": "http://localhost:6006/test",
                 "prefix": "prefix",
@@ -110,7 +110,7 @@ class TestOPEADocumentEmbedder:
 
     def test_from_dict_defaults(self):
         data = {
-            "type": "opea_haystack.embedders.tei.document_embedder.OPEADocumentEmbedder",
+            "type": "haystack_opea.embedders.tei.document_embedder.OPEADocumentEmbedder",
             "init_parameters": {},
         }
         component = default_from_dict(OPEADocumentEmbedder, data)

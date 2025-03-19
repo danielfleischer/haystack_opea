@@ -6,7 +6,7 @@ import os
 import pytest
 from haystack import default_from_dict, default_to_dict
 from haystack.utils import Secret
-from opea_haystack.generators import OPEAGenerator
+from haystack_opea.generators import OPEAGenerator
 from requests_mock import Mocker
 
 
@@ -75,7 +75,7 @@ class TestOPEAGenerator:
         generator = OPEAGenerator()
         data = default_to_dict(generator, **init_parameters)
         assert data == {
-            "type": "opea_haystack.generators.generator.OPEAGenerator",
+            "type": "haystack_opea.generators.generator.OPEAGenerator",
             "init_parameters": init_parameters,
         }
 

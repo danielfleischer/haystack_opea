@@ -5,7 +5,7 @@ import logging
 import os
 
 import pytest
-from opea_haystack.embedders.tei import OPEATextEmbedder
+from haystack_opea.embedders.tei import OPEATextEmbedder
 
 from . import MockBackend
 
@@ -34,7 +34,7 @@ class TestOPEATextEmbedder:
         component = OPEATextEmbedder()
         data = component.to_dict()
         assert data == {
-            "type": "opea_haystack.embedders.tei.text_embedder.OPEATextEmbedder",
+            "type": "haystack_opea.embedders.tei.text_embedder.OPEATextEmbedder",
             "init_parameters": {
                 "api_url": "http://localhost:6006",
                 "prefix": "",
@@ -51,7 +51,7 @@ class TestOPEATextEmbedder:
         )
         data = component.to_dict()
         assert data == {
-            "type": "opea_haystack.embedders.tei.text_embedder.OPEATextEmbedder",
+            "type": "haystack_opea.embedders.tei.text_embedder.OPEATextEmbedder",
             "init_parameters": {
                 "api_url": "https://my-custom-base-url.com",
                 "prefix": "prefix",

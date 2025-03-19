@@ -7,7 +7,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../src")))
 
-from opea_haystack.utils import OPEABackend
+from haystack_opea.utils import OPEABackend
 
 
 class MockBackend(OPEABackend):

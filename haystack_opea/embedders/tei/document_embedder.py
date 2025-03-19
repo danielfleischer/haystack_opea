@@ -4,7 +4,7 @@
 from typing import Any, Dict, List, Optional, Union
 
 from haystack import Document, component, default_to_dict, logging
-from opea_haystack.utils import OPEABackend
+from haystack_opea.utils import OPEABackend
 from tqdm import tqdm
 
 from .truncate import EmbeddingTruncateMode
@@ -23,7 +23,7 @@ class OPEADocumentEmbedder:
     Usage example:
     ```python
     from haystack import Document
-    from opea_haystack.embedders.tei import OPEADocumentEmbedder
+    from haystack_opea.embedders.tei import OPEADocumentEmbedder
 
     doc = Document(content="I love pizza!")
 

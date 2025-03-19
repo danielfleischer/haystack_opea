@@ -4,7 +4,7 @@
 from typing import Any, Dict, List, Optional, Union
 
 from haystack import component, default_to_dict
-from opea_haystack.utils import OPEABackend
+from haystack_opea.utils import OPEABackend
 
 from .truncate import EmbeddingTruncateMode
 
@@ -22,7 +22,7 @@ class OPEATextEmbedder:
 
     Usage example:
     ```python
-    from opea_haystack.embedders.tei import OPEATextEmbedder
+    from haystack_opea.embedders.tei import OPEATextEmbedder
 
     text_to_embed = "I love pizza!"
 

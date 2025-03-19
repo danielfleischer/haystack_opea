@@ -5,7 +5,7 @@ import warnings
 from typing import Any, Dict, List, Optional
 
 from haystack import component
-from opea_haystack.utils import OPEABackend, url_validation
+from haystack_opea.utils import OPEABackend, url_validation
 
 _DEFAULT_API_URL = "http://localhost:9009"
 
@@ -19,7 +19,7 @@ class OPEAGenerator:
     ### Usage example
 
     ```python
-    from opea_haystack.generators import OPEAGenerator
+    from haystack_opea.generators import OPEAGenerator
 
     generator = OPEAGenerator(
         "http://localhost:9009",
