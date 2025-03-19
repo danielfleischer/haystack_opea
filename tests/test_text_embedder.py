@@ -5,6 +5,7 @@ import logging
 import os
 
 import pytest
+
 from haystack_opea.embedders.tei import OPEATextEmbedder
 
 from . import MockBackend
@@ -76,7 +77,6 @@ class TestOPEATextEmbedder:
     )
     @pytest.mark.integration
     def test_run(self):
-
         embedder = OPEATextEmbedder(prefix="prefix ", suffix=" suffix")
         embedder.warm_up()
 

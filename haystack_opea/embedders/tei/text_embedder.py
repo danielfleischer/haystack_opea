@@ -4,6 +4,7 @@
 from typing import Any, Dict, List, Optional, Union
 
 from haystack import component, default_to_dict
+
 from haystack_opea.utils import OPEABackend
 
 from .truncate import EmbeddingTruncateMode

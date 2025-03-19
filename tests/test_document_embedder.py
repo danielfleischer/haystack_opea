@@ -5,6 +5,7 @@ import os
 
 import pytest
 from haystack import Document, default_from_dict
+
 from haystack_opea.embedders.tei import EmbeddingTruncateMode, OPEADocumentEmbedder
 
 from . import MockBackend

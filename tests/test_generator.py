@@ -6,8 +6,9 @@ import os
 import pytest
 from haystack import default_from_dict, default_to_dict
 from haystack.utils import Secret
-from haystack_opea.generators import OPEAGenerator
 from requests_mock import Mocker
+
+from haystack_opea.generators import OPEAGenerator
 
 
 @pytest.fixture

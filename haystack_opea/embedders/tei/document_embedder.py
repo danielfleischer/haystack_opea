@@ -4,8 +4,9 @@
 from typing import Any, Dict, List, Optional, Union
 
 from haystack import Document, component, default_to_dict, logging
-from haystack_opea.utils import OPEABackend
 from tqdm import tqdm
+
+from haystack_opea.utils import OPEABackend
 
 from .truncate import EmbeddingTruncateMode
 
