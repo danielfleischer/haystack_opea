@@ -43,6 +43,7 @@ print(text_embedder.run(text_to_embed)
 ```
 
 And similarly:
+
 ```python
 from haystack import Document
 from haystack_opea.embedders.tei import OPEADocumentEmbedder
@@ -57,7 +58,6 @@ print(result["documents"][0].embedding)
 ```
 
 ## LLMs
-
 
 The class `OPEAGenerator` is introduced:
 

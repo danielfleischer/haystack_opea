@@ -5,9 +5,9 @@ import os
 import sys
 from typing import Any, Dict, List, Optional, Tuple
 
-# sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../src")))
-
 from haystack_opea.utils import OPEABackend
+
+# sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../src")))
 
 
 class MockBackend(OPEABackend):
